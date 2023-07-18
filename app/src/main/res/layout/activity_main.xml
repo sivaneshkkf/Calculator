@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="20dp"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:textColor="@color/grey_text"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp"
+        android:text="0"
+        android:textColor="@color/grey_text"
+        android:textSize="40sp" />
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:background="@drawable/shape_pg"
+        android:backgroundTint="#F3F3F3"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/c"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/lite_red"
+                android:gravity="center"
+                android:text="C"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/b7"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:text="7"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/b4"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:text="4"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/b1"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/AC"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/lite_red"
+                android:gravity="center"
+                android:text="AC"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/l_bracket"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/grey"
+                android:gravity="center"
+                android:text="("
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/b8"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:text="8"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/b5"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/b2"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/b0"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/r_bracket"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/grey"
+                android:gravity="center"
+                android:text=")"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/b9"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:text="9"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/b6"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/b3"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:text="3"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/dot"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/green"
+                android:gravity="center"
+                android:text="."
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/slash"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/orange"
+                android:gravity="center"
+                android:text="/"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/star"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/orange"
+                android:gravity="center"
+                android:text="*"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/plus"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/orange"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/minus"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/orange"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/equal"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_margin="12dp"
+                android:background="@drawable/shape_button"
+                android:backgroundTint="@color/orange"
+                android:gravity="center"
+                android:text="="
+                android:textColor="@color/white"
+                android:textSize="32sp" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
+
+
+</LinearLayout>
