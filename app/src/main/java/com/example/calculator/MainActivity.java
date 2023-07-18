@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         TextView tv=(TextView) v;
         String buttonText=tv.getText().toString();
         String calculateText=binding.calculate.getText().toString();
-
+        Log.i("" ,"");
         if (buttonText.equals("AC")){
             binding.calculate.setText("");
             binding.result.setText("0");
